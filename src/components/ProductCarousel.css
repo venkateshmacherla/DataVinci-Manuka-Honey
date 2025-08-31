@@ -1,0 +1,250 @@
+.carousel {
+    position: relative;
+    max-width: 410px;
+    margin: 0 auto 18px auto;
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 1px 12px rgb(0 0 0 / 7%);
+}
+
+.carousel-img-container {
+    position: relative;
+    width: 100%;
+    padding-top: 85%;
+    background: #e6daec;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.carousel-img-container img {
+    position: absolute;
+    width: 77%;
+    height: auto;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 44%;
+    padding: 5px 13px;
+    font-size: 30px;
+    background: rgba(255, 255, 255, 0.78);
+    border: none;
+    border-radius: 50%;
+    color: #a144ba;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.2s;
+}
+
+.carousel-arrow.left {
+    left: 10px;
+}
+
+.carousel-arrow.right {
+    right: 10px;
+}
+
+.carousel-arrow:hover {
+    background: #efd6f9;
+}
+
+.carousel-thumbs {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.carousel-thumbs img {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.6;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.carousel-thumbs img.active {
+    opacity: 1;
+    border-color: #a742a3;
+}
+
+@media (max-width: 600px) {
+    .carousel {
+        max-width: 95vw;
+        padding: 10px 0 10px 0;
+    }
+
+    .carousel-img-container {
+        padding-top: 90%;
+    }
+
+    .carousel-thumbs img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+.carousel-below-image {
+    display: flex;
+    justify-content: center;
+    margin: 18px auto 0 auto;
+    width: 400px;
+    max-width: 90%;
+}
+
+@media (max-width: 600px) {
+    .carousel {
+        max-width: 95vw;
+        padding: 10px 0;
+        margin: 0 auto;
+        /* center horizontally */
+    }
+
+    .carousel-img-container {
+        padding-top: 90%;
+    }
+
+    .carousel-thumbs {
+        justify-content: center;
+        /* ensure thumbs are centered */
+        padding: 0 5px;
+        /* avoid edge overflow */
+    }
+
+    .carousel-thumbs img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .carousel-below-image {
+        width: 90vw;
+        /* full width but with max-width */
+        max-width: 90%;
+        margin: 18px auto 0 auto;
+        /* center horizontally */
+        justify-content: center;
+        padding: 0 5px;
+        /* some side padding */
+    }
+}
+
+/* Optional: Ensure images scale properly within thumbnails */
+.carousel-thumbs img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .carousel {
+        max-width: 90vw;
+        padding: 8px 0;
+    }
+
+    .carousel-img-container {
+        padding-top: 95%;
+    }
+
+    .carousel-thumbs img {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+    }
+
+    .carousel-below-image {
+        width: 90vw;
+        max-width: 90vw;
+        margin: 18px auto 0 auto;
+        padding: 0 8px;
+        justify-content: center;
+    }
+}
+
+/* Small screens override */
+@media (max-width: 600px) {
+    .carousel {
+        max-width: 95vw;
+        padding: 10px 0;
+        margin: 0 auto;
+    }
+
+    .carousel-img-container {
+        padding-top: 90%;
+    }
+
+    .carousel-thumbs {
+        justify-content: center;
+        padding: 0 5px;
+        width: 100%;
+    }
+
+    .carousel-thumbs img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .carousel-below-image {
+        width: 90vw;
+        max-width: 90%;
+        margin: 18px auto 0 auto;
+        justify-content: center;
+        padding: 0 5px;
+    }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+    .carousel {
+        max-width: 350px;
+        padding: 10px 0;
+    }
+
+    .carousel-img-container {
+        padding-top: 85%;
+    }
+
+    .carousel-thumbs img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .carousel-below-image {
+        width: 360px;
+        max-width: 90%;
+        margin: 18px auto 0 auto;
+    }
+}
+
+/* Mobile landscape screens */
+@media (max-width: 900px) and (orientation: landscape) {
+    .carousel {
+        max-width: 360px;
+        padding: 10px 0;
+    }
+
+    .carousel-img-container {
+        padding-top: 85%;
+    }
+
+    .carousel-thumbs img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .carousel-below-image {
+        width: 360px;
+        max-width: 90%;
+        margin: 18px auto 0 auto;
+    }
+}
+
+/* Make sure images inside thumbnails scale properly */
+.carousel-thumbs img {
+    max-width: 100%;
+    height: auto;
+}

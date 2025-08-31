@@ -1,0 +1,466 @@
+.order-section {
+    border-radius: 0;
+    padding: 18px 0 0 0;
+    max-width: 700px;
+    box-shadow: none;
+    margin-bottom: 10px;
+}
+
+/* Rewards */
+.rewards-row {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+    gap: 7px;
+}
+
+.rewards-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 3px;
+}
+
+.rewards-text {
+    color: #595959;
+    font-size: 14px;
+}
+
+.rewards-points {
+    display: inline-block;
+    background: #fff7e2;
+    color: #f1ad26;
+    border-radius: 50%;
+    padding: 2px 11px;
+    font-weight: 600;
+    font-size: 1em;
+    margin: 0 4px;
+}
+
+.rewards-desc {
+    color: #595959;
+    font-size: 14px;
+}
+
+.rewards-desc a {
+    color: #474747;
+    text-decoration: underline;
+    margin-left: 5px;
+    font-size: 1em;
+}
+
+/* Delivery and Estimate */
+.delivery-details {
+    display: flex;
+    margin-bottom: 20px;
+    font-size: 15px;
+    gap: 25px;
+}
+
+.delivery-details .label {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+}
+
+.delivery-details .value {
+    color: #232325;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+/* Afterpay */
+.afterpay-row {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.afterpay-logo-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.afterpay-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.afterpay-text {
+    font-weight: 700;
+    color: #232325;
+    font-size: 1.08rem;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.01em;
+}
+
+.afterpay-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2px;
+    width: 16px;
+    height: 16px;
+}
+
+.afterpay-desc {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #222;
+    font-size: 15px;
+}
+
+.afterpay-icon {
+    height: 20px;
+    margin: 0 7px;
+}
+
+.afterpay-question {
+    font-size: 15px;
+    color: #777;
+    margin-left: 3px;
+}
+
+/* UMF Scale */
+.umf-scale-row {
+    margin-top: 19px;
+    margin-bottom: 13px;
+}
+
+.umf-scale-label {
+    color: #222;
+    font-size: 1.03em;
+    margin-bottom: 8px;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+}
+
+.umf-scale-bar {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    font-size: 15px;
+    margin-top: 12px;
+    justify-content: flex-start;
+}
+
+/* Default (neutral/gray) */
+.umf-scale-bar span {
+    color: #888;
+    padding: 1px 2px 0 2px;
+    font-size: 1em;
+    border-bottom: 2.5px solid #e6e0e0;
+    transition: border-color 0.16s, color 0.18s;
+    font-weight: 400;
+}
+
+.umf10 {
+    border-bottom: 0.8px solid #E87722 !important
+}
+
+.umf15 {
+    border-bottom: 0.8px solid #E10600 !important
+}
+
+.umf20 {
+    border-bottom: 0.8px solid #CE0F69 !important
+}
+
+.umf24 {
+    color: #a13b8e !important;
+    border-bottom: 2px solid #830065 !important;
+    font-weight: 700 !important;
+}
+
+.umf26 {
+    border-bottom: 0.8px solid #0085CA !important
+}
+
+.umf28 {
+    border-bottom: 0.8px solid #3BAD4E !important
+}
+
+.umf30 {
+    border-bottom: 0.8px solid #203E96 !important
+}
+
+/* Active/selected step override */
+.umf-active {
+    color: #a13b8e;
+    font-weight: 700;
+    border-bottom: 3.2px solid #a13b8e;
+    /* raised underline thickness for the active state */
+}
+
+/* Taste Profile */
+.taste-profile-row {
+    margin-top: 32px;
+    width: 100%;
+}
+
+.taste-profile-label {
+    color: #232325;
+    font-size: 14px;
+    letter-spacing: 0.07em;
+    margin-bottom: 10px;
+}
+
+.taste-profile-bar {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.taste-profile-bar span {
+    flex: 1 1 0;
+    color: #232325;
+    font-size: 0.99em;
+    white-space: nowrap;
+}
+
+.taste-profile-bar input[type="range"] {
+    flex: 8 1 0;
+    appearance: none;
+    width: 100%;
+    height: 3.5px;
+    border-radius: 2.7px;
+    background: linear-gradient(90deg, #E87722 0%, #E10600 28%, #CE0F69 42%, #830065 57%, #0085CA 71%, #3BAD4E 85%, #203E96 100%);
+    outline: none;
+    margin: 0 10px;
+    box-shadow: none;
+    position: relative;
+}
+
+.taste-profile-bar input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #222;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 8px rgba(95, 91, 110, 0.05);
+    cursor: pointer;
+    margin-top: -7px;
+    transition: background 0.15s;
+}
+
+.taste-profile-bar input[type="range"]:focus::-webkit-slider-thumb {
+    background: #444;
+}
+
+.taste-profile-bar input[type="range"]::-moz-range-thumb {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #222;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 8px rgba(95, 91, 110, 0.05);
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.taste-profile-bar input[type="range"]:focus::-moz-range-thumb {
+    background: #444;
+}
+
+.taste-profile-bar input[type="range"]::-ms-thumb {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #222;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 8px rgba(95, 91, 110, 0.05);
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.taste-profile-bar input[type="range"]:focus::-ms-thumb {
+    background: #444;
+}
+
+/* Hide default track for all browsers */
+.taste-profile-bar input[type="range"]::-webkit-slider-runnable-track {
+    height: 3.5px;
+    border-radius: 2.7px;
+    background: transparent;
+}
+
+.taste-profile-bar input[type="range"]::-ms-fill-lower,
+.taste-profile-bar input[type="range"]::-ms-fill-upper {
+    background: transparent;
+}
+
+.taste-profile-bar input[type="range"]:focus {
+    outline: none;
+}
+
+/* Remove border for Firefox */
+.taste-profile-bar input[type="range"] {
+    border: none;
+}
+
+@media (max-width: 700px) {
+    .taste-profile-bar span {
+        font-size: 0.92em;
+    }
+
+    .taste-profile-label {
+        font-size: 0.98em;
+    }
+}
+
+/* Responsive adjustments for tablets and smaller screens */
+@media (max-width: 900px) {
+    .order-section {
+        max-width: 95vw;
+        padding: 12px 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .rewards-row,
+    .delivery-details,
+    .afterpay-row,
+    .umf-scale-row,
+    .taste-profile-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .delivery-details {
+        gap: 12px;
+    }
+
+    .delivery-details .label,
+    .delivery-details .value {
+        font-size: 13px;
+    }
+
+    .afterpay-desc {
+        flex-wrap: wrap;
+        font-size: 13px;
+    }
+
+    .umf-scale-bar {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .umf-scale-bar span {
+        font-size: 0.9em;
+        padding: 1px 5px 0 5px;
+    }
+
+    .taste-profile-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .taste-profile-bar span {
+        font-size: 0.9em;
+        white-space: normal;
+    }
+
+    .taste-profile-bar input[type="range"] {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Responsive adjustments for mobile phones */
+@media (max-width: 600px) {
+    .order-section {
+        padding: 10px 15px;
+        margin-bottom: 15px;
+    }
+
+    .rewards-row,
+    .delivery-details,
+    .afterpay-row,
+    .umf-scale-row,
+    .taste-profile-row {
+        align-items: center;
+    }
+
+    .delivery-details {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .delivery-details .label,
+    .delivery-details .value {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .afterpay-desc {
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 12px;
+    }
+
+    .umf-scale-bar {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .umf-scale-bar span {
+        font-size: 0.85em;
+        padding: 1px 6px 0 6px;
+    }
+
+    .taste-profile-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .taste-profile-bar span {
+        font-size: 0.85em;
+        white-space: normal;
+    }
+
+    .taste-profile-bar input[type="range"] {
+        width: 95%;
+        margin: 12px 0;
+    }
+
+    .taste-profile-label {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .afterpay-row {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+}
+
+/* Extra small mobile adjustments */
+@media (max-width: 400px) {
+
+    .rewards-text,
+    .rewards-desc,
+    .delivery-details .label,
+    .delivery-details .value,
+    .afterpay-desc,
+    .umf-scale-label,
+    .taste-profile-label,
+    .taste-profile-bar span {
+        font-size: 11px;
+    }
+
+    .taste-profile-bar input[type="range"] {
+        width: 90%;
+    }
+}

@@ -1,38 +1,361 @@
-.App {
-  text-align: center;
+body,
+html {
+  margin: 0;
+  padding: 10px;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #FBF9F6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.main-wrapper {
   min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background: #faf8f4;
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-row {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 70px;
+  position: relative;
+}
+
+.navbar-toggle {
+  display: none;
   flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 22px;
+  height: 2.5px;
+  background: #222;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.navbar-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.navbar-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Desktop navbar */
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.navbar-logo-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-searchbox {
+  border: 1px solid #d8d8d8;
+  border-radius: 20px;
+  padding: 7px 18px;
+  font-size: 11px;
+  background: #fff;
+  min-width: 210px;
+  outline: none;
+  margin-right: 10px;
+}
+
+.navbar-nav.desktop {
+  display: flex;
+  gap: 18px;
+}
+
+.navbar-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #222;
+  padding: 0 8px;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+.navbar-btn:hover {
+  color: #c97fc7;
+}
+
+.navbar-icon {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 28px;
+  height: 28px;
+  margin-left: 10px;
+  position: relative;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-icon svg {
+  display: block;
+  width: 22px;
+  height: 22px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar-icon-cart {
+  position: relative;
+}
+
+.navbar-cart-dot {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  background: #ffc84a;
+  color: #222;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+/* ================= MOBILE STYLES ================= */
+@media (max-width: 900px) {
+  .navbar-row {
+    height: 56px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  /* Hide desktop nav */
+  .navbar-left,
+  .navbar-right,
+  .navbar-nav.desktop,
+  .navbar-searchbox {
+    display: none !important;
+  }
+
+  /* Keep logo centered */
+  .navbar-logo-center {
+    flex: 1;
+    justify-content: center;
+  }
+
+  /* Mobile icons wrapper */
+  .navbar-mobile-icons {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    right: 16px;
+    top: 0;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .navbar-mobile-icons .navbar-icon {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .navbar-mobile-icons .navbar-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .navbar-mobile-icons .navbar-cart-dot {
+    top: -6px;
+    right: -8px;
+    font-size: 11px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.navbar-logo-center {
+  width: 150px;
+}
+
+/* Mobile menu dropdown */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  width: 80%;
+  background: #faf8f4;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  border-bottom: 2px solid #f7e6f7;
+  padding: 30px;
+  z-index: 100;
+  transition: max-height 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.mobile-menu.open {
+  display: block;
+  max-height: 400px;
+}
+
+.mobile-menu .navbar-searchbox {
+  display: block;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.navbar-nav.mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.navbar-nav.mobile .navbar-btn {
+  font-size: 18px;
+  text-align: left;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Content layout */
+.content {
+  display: flex;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  padding: 0 24px;
+}
+
+.left,
+.right {
+  flex: 1;
+}
+
+/* Content responsive */
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    gap: 0;
+    padding: 0 8px;
+  }
+}
+
+
+/* Mobile Styles */
+@media (max-width: 900px) {
+  .navbar-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    position: relative;
+  }
+
+  /* Toggle always left */
+  .navbar-toggle {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Hide desktop nav + search */
+  .navbar-left,
+  .navbar-nav.desktop,
+  .navbar-searchbox {
+    display: none !important;
+  }
+
+  /* Logo stays centered */
+  .navbar-logo {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    width: 12px;
+  }
+
+  /* Icons always right */
+  .navbar-right,
+  .navbar-mobile-icons {
+    display: flex !important;
+    align-items: center;
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .navbar-mobile-icons .navbar-icon {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+  }
+
+  .navbar-mobile-icons .navbar-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .navbar-mobile-icons .navbar-cart-dot {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    font-size: 11px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar-logo-center img {
+    max-width: 115px;
+    /* adjust as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Remove tiny forced widths */
+  .navbar-logo,
+  .navbar-logo-center {
+    width: auto !important;
   }
 }

@@ -1,0 +1,331 @@
+.product-selection-section {
+    padding: 26px 18px 18px 18px;
+    border-radius: 18px;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.cert-row {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    margin-bottom: 16px;
+    justify-content: center;
+}
+
+
+
+.cert-icon {
+    height: 70px;
+    width: 100%;
+    object-fit: contain;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.size-row {
+    margin-bottom: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 16px;
+    align-items: flex-start;
+}
+
+.size-label {
+    background: #f9fefa;
+    color: #65a58e;
+    border: 1.5px solid #65a58e;
+    font-size: 13px;
+    border-radius: 7px;
+    padding: 2px 11px;
+    margin-bottom: 3px;
+    letter-spacing: 0.11em;
+    font-weight: 700;
+}
+
+.variant-info {
+    color: #595959;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 2px 0 0 1px;
+}
+
+.product-thumb-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 19px;
+    margin-bottom: 22px;
+}
+
+.product-thumb {
+    padding: 6px;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    transition: border 0.18s;
+    cursor: pointer;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-thumb.selected {
+    border: 2px solid #F1B434;
+    box-shadow: 0 2px 14px rgba(255, 180, 59, 0.13);
+}
+
+.product-thumb img {
+    max-width: 64px;
+    max-height: 64px;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    .cert-row {
+        gap: 14px;
+        /* reduce gap on smaller screens */
+        margin-bottom: 12px;
+    }
+
+    .product-thumb img {
+        max-width: 48px;
+        /* smaller images for mobile */
+        max-height: 48px;
+    }
+
+
+}
+
+.pay-row-label {
+    margin: 22px 0 8px 2px;
+    font-size: 14px;
+    color: #868686;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.payment-options-row {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    margin-bottom: 8px;
+    background: #F2F2F2;
+    padding: 25px;
+}
+
+.pay-option {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* vibrant yellow */
+    border-radius: 25px;
+    /* more pill-shaped, adjust for height */
+    border: 1px solid #F1B434;
+    padding: 0 30px;
+    min-height: 48px;
+    cursor: pointer;
+    font-size: 11.2px;
+    font-weight: 500;
+    color: #fff;
+    /* white text */
+    min-width: 180px;
+    max-width: 320px;
+    box-sizing: border-box;
+    transition: filter 0.15s, box-shadow 0.15s;
+    box-shadow: 0 1px 5px rgba(252, 190, 60, 0.10);
+}
+
+.pay-option.selected {
+    background: #F1B434;
+    border-color: #F1B434;
+    color: #b7820c;
+}
+
+.pay-type {
+    font-size: 1.07em;
+    color: #232325;
+    margin-bottom: 3px;
+    font-weight: 500;
+}
+
+.pay-price {
+    font-size: 1.09em;
+    color: #222;
+    margin-top: 3px;
+}
+
+.subscription-hint-row {
+    margin-top: 12px;
+    align-items: center;
+    display: flex;
+    gap: 6px;
+    color: #bbb;
+    font-size: 15px;
+}
+
+.info-circ {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1.1px solid #bbb;
+    color: #bbb;
+    background: #f3f3f3;
+    font-size: 15px;
+    text-align: center;
+    line-height: 18px;
+    font-weight: bold;
+}
+
+.subscription-hint-row {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #676767;
+    font-size: 15px;
+    margin-top: 4px;
+}
+
+.refresh-circ {
+    display: inline-flex;
+    width: 18px;
+    height: 18px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2px;
+    /* No background or border for a clean icon look */
+}
+
+.subscription-hint {
+    color: #6b6b6b;
+    font-size: 15px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+/* Responsive adjustments */
+/* Ensure certification icons don't overflow and wrap nicely on mobile */
+@media (max-width: 600px) {
+    .cert-row {
+        flex-wrap: wrap;
+        gap: 10px;
+        row-gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .cert-icon {
+        height: 46px !important;
+        max-width: 80px;
+        min-width: 42px;
+    }
+
+    .pay-row-label {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+/* Make size-row and variant info more legible/flexible on small screens */
+@media (max-width: 600px) {
+    .size-row {
+        font-size: 15px;
+        gap: 2px;
+        word-break: break-word;
+        width: 100%;
+        align-items: center;
+    }
+
+    .size-label {
+        font-size: 12px;
+        padding: 2px 7px;
+    }
+
+    .variant-info {
+        font-size: 12.5px;
+    }
+}
+
+/* Product thumbnails: shrink container and images, force wrapping */
+@media (max-width: 600px) {
+    .product-thumb-row {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 18px;
+    }
+
+    .product-thumb {
+        width: 80px;
+        height: 70px;
+        padding: 2px;
+    }
+
+    .product-thumb img {
+        max-width: 38px;
+        max-height: 38px;
+    }
+}
+
+/* Payment options: stack on tiny screens, shrink paddings */
+@media (max-width: 600px) {
+    .payment-options-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .pay-option {
+        min-width: 0;
+        width: 100%;
+        max-width: 320px;
+        padding: 0 12px;
+        font-size: 12px;
+        min-height: 39px;
+    }
+}
+
+@media (max-width: 400px) {
+    .pay-option {
+        font-size: 11px;
+        min-height: 32px;
+    }
+}
+
+/* Center and wrap subscription/info rows without overflow */
+@media (max-width: 600px) {
+
+    .subscription-hint-row,
+    .refresh-circ {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3px;
+        font-size: 13px;
+    }
+
+    .subscription-hint {
+        font-size: 13px;
+        min-width: 0;
+    }
+
+    .info-circ,
+    .refresh-circ {
+        min-width: 16px;
+        width: 16px;
+        height: 16px;
+        font-size: 13px;
+    }
+}
+
+/* Reduce side padding of the card/wrapper more on small screens */
+@media (max-width: 510px) {
+    .product-selection-section {
+        padding: 8px 1vw 15px 1vw;
+        max-width: 99vw;
+    }
+}

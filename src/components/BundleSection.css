@@ -1,0 +1,469 @@
+.bundle-section {
+    padding: 18px 20px 20px 20px;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(30, 16, 56, 0.06);
+    margin: 0 auto 24px auto;
+    background: #F2F2F2;
+}
+
+.bundle-title-row.plain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    /* controls the even space between arrows and title */
+    padding: 18px 0 10px 0;
+    margin: 0 0 10px 0;
+    background: none;
+    border-radius: 0;
+}
+
+.bundle-title {
+    color: #222;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.01rem;
+    flex-shrink: 0;
+    line-height: 1.1;
+}
+
+.bundle-arrow {
+    font-size: 15px;
+    color: #888;
+    cursor: pointer;
+    user-select: none;
+    line-height: 1;
+    font-weight: 600;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    transition: color 0.13s;
+}
+
+.bundle-items {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 13px;
+}
+
+.bundle-product img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 5px;
+    background: #ffffff;
+    border-radius: 9px;
+}
+
+.bundle-product span {
+    display: block;
+    color: #7d6687;
+    font-size: 12.2px;
+    margin-top: 2px;
+    text-align: center;
+}
+
+.bundle-pricing {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 1.11rem;
+    margin-bottom: 12px;
+}
+
+.oldprice {
+    color: #b6b5a4;
+    font-size: 15px;
+    text-decoration: line-through;
+    margin-right: 6px;
+}
+
+.bundle-price {
+    font-weight: 700;
+    color: #282226;
+    font-size: 1.13rem;
+}
+
+.bundle-save {
+    background: #efffe3;
+    color: #65a854;
+    border-radius: 8px;
+    font-size: 11.3px;
+    padding: 3px 11px;
+    margin-left: 4px;
+    font-weight: 500;
+}
+
+.bundle-add-btn {
+    width: 100%;
+    background: #242529;
+    color: #fff;
+    border: none;
+    border-radius: 19px;
+    font-size: 1.06rem;
+    font-weight: 700;
+    padding: 12px 0;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: background 0.16s;
+}
+
+.bundle-add-btn:hover {
+    background: #4e496c;
+}
+
+@media (max-width: 600px) {
+    .bundle-section {
+        padding: 10px 4vw;
+        max-width: 98vw;
+    }
+
+    .bundle-items {
+        gap: 8px;
+    }
+}
+
+.bundle-action-row {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin: 14px 0 16px 0;
+}
+
+.qty-group {
+    display: flex;
+    align-items: center;
+    background: #fac24c;
+    border-radius: 25px;
+    padding: 0 18px;
+    min-width: 125px;
+    height: 43px;
+}
+
+.qty-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 32px;
+    height: 40px;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.12s;
+}
+
+.qty-num {
+    flex: 1;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    min-width: 18px;
+    text-align: center;
+}
+
+.bundle-add-cart-btn {
+    flex: 1;
+    background: #353432;
+    color: #fff;
+    border: none;
+    height: 43px;
+    border-radius: 25px;
+    font-size: 1.13rem;
+    font-weight: 600;
+    margin-left: 12px;
+    cursor: pointer;
+    transition: background 0.18s;
+    letter-spacing: .07em;
+}
+
+.bundle-add-cart-btn:hover {
+    background: #242529;
+}
+
+.bundle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f4f4f4;
+    border-radius: 16px;
+    gap: 0px;
+}
+
+.bundle-items {
+    display: flex;
+    align-items: flex-end;
+    gap: 0px;
+}
+
+.bundle-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(30, 16, 56, 0.08);
+    padding: 5px;
+    min-width: 80px;
+    max-height: 110px;
+}
+
+.bundle-product img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 9px;
+    margin-bottom: 8px;
+}
+
+.bundle-label {
+    color: #353535;
+    font-size: 13px;
+    margin-bottom: 3px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.bundle-select {
+    width: 70px;
+    border-radius: 7px;
+    border: 1px solid #e4e4e4;
+    font-size: 12px;
+    background: #fbfbfb;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    padding: 2.5px 9px;
+    color: #454545;
+    outline: none;
+}
+
+.bundle-plus {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #b1b1b1;
+    font-weight: 700;
+    margin: 0 11px;
+    user-select: none;
+    height: 100%;
+    align-self: center;
+}
+
+.bundle-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    min-width: 255px;
+    flex: 1;
+    margin-left: 20px;
+}
+
+.bundle-pricing {
+    display: flex;
+    align-items: flex-end;
+    gap: 9px;
+    margin-bottom: 17px;
+}
+
+.oldprice {
+    color: #bababa;
+    font-size: 14px;
+    text-decoration: line-through;
+    margin-right: 2px;
+}
+
+.bundle-price {
+    font-weight: 700;
+    color: #242529;
+    font-size: 17px;
+}
+
+.bundle-save {
+    color: #3eac45;
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.bundle-add-btn {
+    background: #242529;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 13px 34px;
+    cursor: pointer;
+    margin-top: 2px;
+    box-shadow: 0 2px 10px rgba(46, 41, 74, 0.10);
+    letter-spacing: 0.06em;
+    transition: background 0.17s;
+}
+
+.bundle-add-btn:hover {
+    background: #444346;
+}
+
+@media (max-width: 700px) {
+    .bundle-row {
+        flex-direction: column;
+        gap: 20px;
+        padding: 11px 3vw;
+    }
+
+    .bundle-summary {
+        align-items: center;
+        margin-left: 0;
+        min-width: 0;
+        width: 100%;
+    }
+
+    .bundle-items {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .bundle-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .bundle-row,
+    .bundle-items,
+    .bundle-summary {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* Medium screens - Tablets */
+@media (max-width: 700px) {
+    .bundle-row {
+        flex-direction: column;
+        gap: 20px;
+        padding: 11px 3vw;
+    }
+
+    .bundle-summary {
+        align-items: center;
+        margin-left: 0;
+        min-width: 0;
+        width: 100%;
+    }
+
+    .bundle-items {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Small screens - Phones */
+@media (max-width: 600px) {
+    .bundle-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px 4vw;
+    }
+
+    .bundle-row,
+    .bundle-items,
+    .bundle-summary {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .bundle-product {
+        min-width: auto;
+        max-height: none;
+        padding: 10px 0;
+    }
+
+    .bundle-product img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 5px;
+    }
+
+    .bundle-label {
+        font-size: 14px;
+    }
+
+    .bundle-pricing {
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 12px;
+        align-items: center;
+    }
+
+    .bundle-price {
+        font-size: 1.2rem;
+    }
+
+    .bundle-save {
+        margin-left: 0;
+    }
+
+    .bundle-add-btn {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 14px 0;
+        margin-top: 12px;
+        justify-content: center;
+    }
+
+    .bundle-action-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .qty-group {
+        min-width: auto;
+        padding: 0 15px;
+        height: 35px;
+    }
+
+    .qty-btn {
+        width: 28px;
+        height: 36px;
+        font-size: 1.3rem;
+    }
+
+    .qty-num {
+        font-size: 1.2rem;
+        letter-spacing: 0.03em;
+    }
+
+    .bundle-add-cart-btn {
+        margin-left: 0;
+        width: 100%;
+        height: 50px;
+        font-size: 13px;
+        padding: 12px;
+    }
+
+    .bundle-title {
+        font-size: 20px;
+    }
+}
